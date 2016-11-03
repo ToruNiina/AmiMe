@@ -1,0 +1,11 @@
+#ifndef AMIME_CORE_RUNGE_KUTTA_ODE_SOLVER
+#define AMIME_CORE_RUNGE_KUTTA_ODE_SOLVER
+
+namespace amime
+{
+
+
+
+
+} // amime
+#endif /* AMIME_CORE_RUNGE_KUTTA_ODE_SOLVER */
