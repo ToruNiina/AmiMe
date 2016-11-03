@@ -7,13 +7,13 @@ For example, gene reguratory network, metabolic network or neural network.
 
 "AmiMe(網目)" means "mesh" or "network" in Japanese.
 
-# Examples
+## Examples
 
-# For developpers
+## For developpers
 
-# Testing
+## Testing
 
-# Licensing Terms
+## Licensing Terms
 This project is licensed under the terms of the MIT License.
 See LICENSE for the project license.
 
