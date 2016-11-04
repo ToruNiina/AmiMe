@@ -6,12 +6,14 @@
 namespace amime
 {
 
-template<typename stateT>
+template<typename stateT, typename timeT>
 struct Node
 {
-    stateT    state;
-    std::funciton<stateT(std::vector<Node const*> const&)> reaction;
-    std::vector<Node const*> inputs;
+    typedef std::vector<Node const*> neighbor_type;
+    stateT        state;
+    neighbor_type inputs;
+    std::funciton<stateT(const timeT t, const stateT s, neighbor_type const&)>
+                  reaction;
 };
 
 } // amime
