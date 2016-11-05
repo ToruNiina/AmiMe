@@ -20,7 +20,7 @@ class Simulator
 
   public:
     Simulator(const time_type end_time,
-              const solver_type& solver, const network_type& net)
+              const solver_type& solver, network_type& net)
         : time_(0), end_time_(end_time), solver_(solver), network_(net)
     {}
     ~Simulator() = default;
@@ -28,19 +28,21 @@ class Simulator
     bool step(){this->step_(); return (time_ < end_time_);}
     void step_until(const time_type t){while(this->time < t){this->step_();}}
 
+    time_type  time() const {return this->time_;}
+    time_type& time()       {return this->time_;}
     network_type const& network() const {return network_;}
     network_type &      network()       {return network_;}
     solver_type const& solver() const {return solver_;}
     solver_type &      solver()       {return solver_;}
 
   private:
-    void step_(){this->time_ = this->solver_(this->time, network);}
+    void step_(){this->time_ = this->solver_(this->time_, network_);}
 
   private:
-    time_type    time_;
-    time_type    end_time_;
-    solver_type  solver_;
-    network_type network_;
+    time_type     time_;
+    time_type     end_time_;
+    solver_type   solver_;
+    network_type& network_;
 };
 
 } // amime
