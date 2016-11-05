@@ -168,12 +168,5 @@ inline bool zip_iterator<T_args...>::operator!=(const self_type& rhs) const
     return this->iters_ != rhs.iters_;
 }
 
-// helper func
-template<typename ... T_args>
-inline zip_iterator<T_args...> make_zip(const T_args& ... args)
-{
-    return zip_iterator<T_args...>(args...);
-}
-
 } // amime
 #endif /* AMIME_ZIP_ITERATOR */
