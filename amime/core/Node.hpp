@@ -12,7 +12,7 @@ struct Node
     typedef std::vector<Node const*> neighbor_type;
     stateT        state;
     neighbor_type inputs;
-    std::funciton<stateT(const timeT t, const stateT s, neighbor_type const&)>
+    std::function<stateT(const timeT t, const stateT s, neighbor_type const&)>
                   reaction;
 };
 
