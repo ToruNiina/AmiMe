@@ -9,6 +9,10 @@ For example, gene reguratory network, metabolic network or neural network.
 
 ## Examples
 
+### Repressilator
+
+![repressilator](data/repressilator.png)
+
 ## For developpers
 
 ## Testing
