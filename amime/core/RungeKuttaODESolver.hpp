@@ -15,7 +15,6 @@ class RungeKuttaODESolver
     typedef traitsT traits_type;
     typedef typename traits_type::time_type time_type;
     typedef typename traits_type::state_type state_type;
-    typedef typename traits_type::real_type real_type;
 
     typedef Network<traits_type> network_type;
     typedef typename network_type::node_type node_type;
