@@ -1,11 +1,9 @@
 AmiMe
 ====
 
-AmiMe is a package in order to simulate a Network Dynamics.
+AmiMe is a package to simulate a Network Dynamics.
 
 For example, gene reguratory network, metabolic network or neural network.
-
-"AmiMe(網目)" means "mesh" or "network" in Japanese.
 
 ## Examples
 
