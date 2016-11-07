@@ -19,6 +19,7 @@ class Network
     typedef typename container_type::iterator       iterator;
     typedef typename container_type::const_iterator const_iterator;
 
+  public:
     Network() = default;
     ~Network() = default;
 
@@ -30,9 +31,19 @@ class Network
     }
 
     std::pair<iterator, bool>
+    insert(const node_id_type& id, node_type&& node)
+    {
+        return this->container_.insert(std::make_pair(id, std::forward<node_type>(node)));
+    }
+    std::pair<iterator, bool>
     insert(const node_id_type& id, const node_type& node)
     {
         return this->container_.insert(std::make_pair(id, node));
+    }
+
+    void connect(const node_id_type& fw, const node_id_type& bw)
+    {
+        this->container_.at(bw).inputs.push_back(&(this->container_.at(fw)));
     }
 
     void erase(const node_id_type& id){container_.erase(id);}
